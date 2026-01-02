@@ -1,5 +1,6 @@
 def main():
-    get_book_text("./books/frankenstein.txt")
+    book_text = get_book_text("./books/frankenstein.txt")
+    count_book_words(book_text)
 
 
 def get_book_text(filepath):
@@ -9,6 +10,12 @@ def get_book_text(filepath):
         book_text = file.read()
 
     return book_text
+
+
+def count_book_words(book_text):
+    book_words = book_text.split()
+
+    print(f"Found {len(book_words)} total words")
 
 
 main()
