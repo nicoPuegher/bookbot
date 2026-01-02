@@ -1,6 +1,6 @@
 def main():
     book_text = get_book_text("./books/frankenstein.txt")
-    count_book_words(book_text)
+    book_words = book_text.split()
 
 
 def get_book_text(filepath):
