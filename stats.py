@@ -11,3 +11,14 @@ def count_characters(book_words):
                 character_counts[lowercase_char] += 1
 
     return character_counts
+
+
+def format_dictionary(character_counts):
+    character_counts_list = []
+
+    for character in character_counts:
+        character_counts_list.append(
+            {"char": character, "num": character_counts[character]}
+        )
+
+    return character_counts_list
