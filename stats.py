@@ -22,3 +22,7 @@ def format_dictionary(character_counts):
         )
 
     return character_counts_list
+
+
+def sort_on(items):
+    return items["num"]
