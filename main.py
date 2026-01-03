@@ -2,7 +2,8 @@ from stats import count_characters
 
 
 def main():
-    book_text = get_book_text("./books/frankenstein.txt")
+    filepath = "books/frankenstein.txt"
+    book_text = get_book_text(filepath)
     book_words = book_text.split()
     character_counts = count_characters(book_words)
 
