@@ -8,7 +8,7 @@ def main():
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
-    filepath = "books/frankenstein.txt"
+    filepath = sys.argv[1]
     book_text = get_book_text(filepath)
     book_words = book_text.split()
     character_counts = count_characters(book_words)
