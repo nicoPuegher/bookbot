@@ -1,4 +1,4 @@
-from stats import count_characters
+from stats import count_characters, format_dictionary, sort_on
 
 
 def main():
@@ -6,6 +6,9 @@ def main():
     book_text = get_book_text(filepath)
     book_words = book_text.split()
     character_counts = count_characters(book_words)
+    character_counts_list = format_dictionary(character_counts)
+    character_counts_list.sort(reverse=True, key=sort_on)
+    print_results(book_words, character_counts_list, filepath)
 
 
 def get_book_text(filepath):
