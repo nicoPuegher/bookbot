@@ -17,4 +17,18 @@ def get_book_text(filepath):
     return book_text
 
 
+def print_results(book_words, character_counts_list, filepath):
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {filepath}...")
+    print("----------- Word Count ----------")
+    print(f"Found {len(book_words)} total words")
+    print("--------- Character Count -------")
+
+    for dictionary in character_counts_list:
+        if dictionary["char"].isalpha():
+            print(f"{dictionary['char']}: {dictionary['num']}")
+
+    print("============= END ===============")
+
+
 main()
