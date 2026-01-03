@@ -1,7 +1,13 @@
+import sys
+
 from stats import count_characters, format_dictionary, sort_on
 
 
 def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
     filepath = "books/frankenstein.txt"
     book_text = get_book_text(filepath)
     book_words = book_text.split()
